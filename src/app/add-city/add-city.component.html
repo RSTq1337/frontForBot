@@ -1,0 +1,49 @@
+<h3>Create City</h3>
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4" >
+    <div [hidden]="submitted" style="width: 400px;">
+      <form [formGroup]="citysaveform" #savecity (ngSubmit)="saveCity(saveCity)">
+          <div class="form-group">
+              <label for="name">City Name</label>
+              <input type="text" class="form-control"  formControlName="city_name" data-toggle="tooltip"
+                 data-placement="right" title="Enter City Name" >
+              <div class="alert alert-danger" *ngIf = "(CityName.touched) && (CityName.invalid)"
+                style="margin-top: 5px;">
+                  <span *ngIf="CityName.errors.required">City Name is Required</span>
+                    <span *ngIf = "CityName.errors.minlength">
+                        MinLength Error
+                    </span>
+                </div>
+          </div>
+
+          <div class="form-group">
+              <label for="name">Student Description</label>
+              <input type="text" class="form-control" formControlName="city_description"
+                data-toggle="tooltip" data-placement="right" title="Enter City Description">
+                <div class="alert alert-danger" *ngIf = "(CityDescription.touched) && (CityDescription.invalid)"
+                style="margin-top: 5px;">
+                  <span *ngIf="CityDescription.errors.required">City Description is Required</span>
+                    <span *ngIf = "CityDescription.errors.description">
+                        Invalid Description
+                    </span>
+                </div>
+          </div>
+          <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+  </div>
+  </div>
+  <div class="col-sm-4"></div>
+</div>
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4">
+      <div [hidden]="!submitted">
+         <h4>City Added SuccessFully!</h4>
+         <button (click)="addCityForm()" class='btn btn-primary'>Add More City</button>
+      </div>
+  </div>
+  <div class="col-sm-4"></div>
+</div>
+
+
