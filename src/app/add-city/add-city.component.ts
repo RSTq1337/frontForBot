@@ -19,14 +19,14 @@ export class AddCityComponent implements OnInit {
   }
 
   citysaveform=new FormGroup({
-    city_name:new FormControl('' , [Validators.required , Validators.minLength(5) ] ),
-    city_description:new FormControl('',[Validators.required,Validators.minLength(5)])
+    name:new FormControl('' , [Validators.required , Validators.minLength(5) ] ),
+    description:new FormControl('',[Validators.required,Validators.minLength(5)])
   });
 
   saveCity(saveCity){
     this.city=new City();
-    this.city.city_name=this.CityName.value;
-    this.city.city_description=this.CityDescription.value;
+    this.city.name=this.CityName.value;
+    this.city.description=this.CityDescription.value;
     this.submitted = true;
     this.save();
   }
@@ -40,11 +40,11 @@ export class AddCityComponent implements OnInit {
   }
 
   get CityName(){
-    return this.citysaveform.get('city_name');
+    return this.citysaveform.get('name');
   }
 
   get CityDescription(){
-    return this.citysaveform.get('city_description');
+    return this.citysaveform.get('description');
   }
 
   addCityForm(){

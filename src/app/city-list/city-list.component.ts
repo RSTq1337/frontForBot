@@ -64,18 +64,18 @@ export class CityListComponent implements OnInit {
   }
 
   cityupdateform=new FormGroup({
-    city_id:new FormControl(),
-    city_name:new FormControl(),
-    city_description:new FormControl()
+    id:new FormControl(),
+    name:new FormControl(),
+    description:new FormControl()
   });
 
   updateCty(updcty){
     this.city=new City();
-   this.city.city_id=this.CityId.value;
-   this.city.city_name=this.CityName.value;
-   this.city.city_description=this.CityDescription.value;
+   this.city.id=this.CityId.value;
+   this.city.name=this.CityName.value;
+   this.city.description=this.CityDescription.value;
 
-   this.cityservice.updateCity(this.city.city_id,this.city).subscribe(
+   this.cityservice.updateCity(this.city.id,this.city).subscribe(
     data => {
       this.isupdated=true;
       this.cityservice.getCityList().subscribe(data =>{
@@ -86,16 +86,16 @@ export class CityListComponent implements OnInit {
   }
 
   get CityName(){
-    return this.cityupdateform.get('city_name');
+    return this.cityupdateform.get('name');
   }
 
   get CityDescription(){
-    return this.cityupdateform.get('city_description');
+    return this.cityupdateform.get('description');
   }
 
 
   get CityId(){
-    return this.cityupdateform.get('city_id');
+    return this.cityupdateform.get('id');
   }
 
   changeisUpdate(){

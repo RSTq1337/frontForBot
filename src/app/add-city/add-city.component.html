@@ -6,7 +6,7 @@
       <form [formGroup]="citysaveform" #savecity (ngSubmit)="saveCity(saveCity)">
           <div class="form-group">
               <label for="name">City Name</label>
-              <input type="text" class="form-control"  formControlName="city_name" data-toggle="tooltip"
+              <input type="text" class="form-control"  formControlName="name" data-toggle="tooltip"
                  data-placement="right" title="Enter City Name" >
               <div class="alert alert-danger" *ngIf = "(CityName.touched) && (CityName.invalid)"
                 style="margin-top: 5px;">
@@ -19,7 +19,7 @@
 
           <div class="form-group">
               <label for="name">Student Description</label>
-              <input type="text" class="form-control" formControlName="city_description"
+              <input type="text" class="form-control" formControlName="description"
                 data-toggle="tooltip" data-placement="right" title="Enter City Description">
                 <div class="alert alert-danger" *ngIf = "(CityDescription.touched) && (CityDescription.invalid)"
                 style="margin-top: 5px;">

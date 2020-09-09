@@ -28,10 +28,10 @@
           </thead>
           <tbody>
                <tr *ngFor="let city of cities ">
-                  <td>{{city.city_name}}</td>
-                  <td>{{city.city_description}}</td>
-                  <td><button (click)="deleteCity(city.city_id)" class='btn btn-primary'><i class="fa fa-futboll-0">Delete</i></button>&nbsp;
-                    <button (click)="updateCity(city.city_id)" class='btn btn-info'
+                  <td>{{city.name}}</td>
+                  <td>{{city.description}}</td>
+                  <td><button (click)="deleteCity(city.id)" class='btn btn-primary'><i class="fa fa-futboll-0">Delete</i></button>&nbsp;
+                    <button (click)="updateCity(city.id)" class='btn btn-info'
                     data-toggle="modal" data-target="#myModal">Update</button>
                   </td>
                 </tr>
@@ -54,15 +54,15 @@
             <div class="modal-body" *ngFor="let city of citylist " >
                 <div [hidden]="isupdated">
 
-                    <input type="hidden" class="form-control"  formControlName="city_id" [(ngModel)]="city.city_id">
+                    <input type="hidden" class="form-control"  formControlName="id" [(ngModel)]="city.id">
                             <div class="form-group">
                                 <label for="name">City Name</label>
-                                <input type="text" class="form-control"  formControlName="city_name" [(ngModel)]="city.city_name"  >
+                                <input type="text" class="form-control"  formControlName="name" [(ngModel)]="city.name"  >
                             </div>
 
                             <div class="form-group">
                                 <label for="name">City Description</label>
-                                <input type="text" class="form-control" formControlName="city_description" [(ngModel)]="city.city_description">
+                                <input type="text" class="form-control" formControlName="description" [(ngModel)]="city.description">
                             </div>
 
                   </div>

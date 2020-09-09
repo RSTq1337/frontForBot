@@ -34,7 +34,7 @@
               "node_modules/datatables.net/js/jquery.dataTables.js"
             ],
             "es5BrowserSupport": true
-            
+
           },
           "configurations": {
             "production": {
@@ -92,7 +92,7 @@
             ],
             "scripts": [],
             "assets": [
-              "src/favicon.ico",
+              "src/favicon.png",
               "src/assets"
             ]
           }
