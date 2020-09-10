@@ -8,7 +8,7 @@ First you need to run a [backend](https://github.com/RSTq1337/backForBot) (do no
 
 Then Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
-# How it looks
+# How it looks</br>
 #####web page
 ![main_page](https://res.cloudinary.com/summerproject/image/upload/v1599781180/gitHubREAD.me/%D0%BF%D0%B5%D1%80%D0%B2%D1%8B%D0%B9%D0%A1%D0%9A%D0%A0%D0%98%D0%9D_r1mdee.png)
 
