@@ -19,7 +19,7 @@ export class CityListComponent implements OnInit {
   dtTrigger: Subject<any>= new Subject();
 
 
-  cities: City[];    //MYCHANGE
+  cities: City[];
   city : City=new City();
   deleteMessage=false;
   citylist:any;
@@ -29,7 +29,7 @@ export class CityListComponent implements OnInit {
   ngOnInit() {
     this.isupdated=false;
     this.dtOptions = {
-      pageLength: 6,
+      pageLength: 10,
       stateSave:true,
       lengthMenu:[[6, 16, 20, -1], [6, 16, 20, "All"]],
       processing: true
